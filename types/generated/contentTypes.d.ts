@@ -1096,6 +1096,38 @@ export interface ApiTodayTaskTodayTask extends Schema.CollectionType {
   };
 }
 
+export interface ApiToolLinkToolLink extends Schema.CollectionType {
+  collectionName: 'tool_links';
+  info: {
+    singularName: 'tool-link';
+    pluralName: 'tool-links';
+    displayName: 'tool_link';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    emp_name: Attribute.String;
+    fb: Attribute.Integer;
+    system_link: Attribute.String;
+    system_name: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::tool-link.tool-link',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::tool-link.tool-link',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -1122,6 +1154,7 @@ declare module '@strapi/types' {
       'api::task.task': ApiTaskTask;
       'api::task-report.task-report': ApiTaskReportTaskReport;
       'api::today-task.today-task': ApiTodayTaskTodayTask;
+      'api::tool-link.tool-link': ApiToolLinkToolLink;
     }
   }
 }

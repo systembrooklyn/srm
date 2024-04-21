@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tool_links",
+  "info": {
+    "singularName": "tool-link",
+    "pluralName": "tool-links",
+    "displayName": "tool_link"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "emp_name": {
+      "type": "string"
+    },
+    "fb": {
+      "type": "integer"
+    },
+    "system_link": {
+      "type": "string"
+    },
+    "system_name": {
+      "type": "string"
+    }
+  }
+}
