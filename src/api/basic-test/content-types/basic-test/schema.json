@@ -1,0 +1,78 @@
+{
+  "kind": "collectionType",
+  "collectionName": "basic_tests",
+  "info": {
+    "singularName": "basic-test",
+    "pluralName": "basic-tests",
+    "displayName": "BasicTest"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "studentnum": {
+      "type": "integer"
+    },
+    "name": {
+      "type": "string"
+    },
+    "scholarship": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "careertype": {
+      "type": "string"
+    },
+    "grade": {
+      "type": "string"
+    },
+    "reservation_case": {
+      "type": "string"
+    },
+    "reservation_date": {
+      "type": "string"
+    },
+    "study_type": {
+      "type": "string"
+    },
+    "called_by": {
+      "type": "string"
+    },
+    "recp": {
+      "type": "string"
+    },
+    "reserver": {
+      "type": "string"
+    },
+    "birth_date": {
+      "type": "string"
+    },
+    "schadule": {
+      "type": "string"
+    },
+    "payments": {
+      "type": "string"
+    },
+    "papers": {
+      "type": "string"
+    },
+    "requests": {
+      "type": "string"
+    },
+    "complaints": {
+      "type": "string"
+    },
+    "image": {
+      "type": "string"
+    },
+    "national_id": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    }
+  }
+}

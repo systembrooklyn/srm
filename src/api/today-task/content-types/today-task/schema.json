@@ -1,0 +1,58 @@
+{
+  "kind": "collectionType",
+  "collectionName": "today_tasks",
+  "info": {
+    "singularName": "today-task",
+    "pluralName": "today-tasks",
+    "displayName": "today_task",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "task_no": {
+      "type": "integer"
+    },
+    "task_name": {
+      "type": "string"
+    },
+    "department": {
+      "type": "string"
+    },
+    "responsible": {
+      "type": "string"
+    },
+    "task_des_link": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "days": {
+      "type": "string"
+    },
+    "fromm": {
+      "type": "string"
+    },
+    "too": {
+      "type": "string"
+    },
+    "task_completion": {
+      "type": "integer"
+    },
+    "emp": {
+      "type": "string"
+    },
+    "note": {
+      "type": "string"
+    },
+    "report": {
+      "type": "string"
+    },
+    "task_found": {
+      "type": "string"
+    }
+  }
+}

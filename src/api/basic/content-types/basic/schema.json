@@ -1,0 +1,90 @@
+{
+  "kind": "collectionType",
+  "collectionName": "basics",
+  "info": {
+    "singularName": "basic",
+    "pluralName": "basics",
+    "displayName": "Basic",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "studentnum": {
+      "type": "integer",
+      "required": false,
+      "unique": true
+    },
+    "name": {
+      "type": "string",
+      "required": false
+    },
+    "scholarship": {
+      "type": "string",
+      "required": false
+    },
+    "phone": {
+      "type": "string",
+      "required": false
+    },
+    "careertype": {
+      "type": "string"
+    },
+    "grade": {
+      "type": "string"
+    },
+    "reservation_case": {
+      "type": "string"
+    },
+    "reservation_date": {
+      "type": "string"
+    },
+    "study_type": {
+      "type": "string"
+    },
+    "called_by": {
+      "type": "string"
+    },
+    "recp": {
+      "type": "string"
+    },
+    "reserver": {
+      "type": "string"
+    },
+    "birth_date": {
+      "type": "string"
+    },
+    "schadule": {
+      "type": "string"
+    },
+    "payments": {
+      "type": "string"
+    },
+    "papers": {
+      "type": "string"
+    },
+    "requests": {
+      "type": "string"
+    },
+    "complaints": {
+      "type": "string"
+    },
+    "image": {
+      "type": "string"
+    },
+    "national_id": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "cancel_Date": {
+      "type": "string"
+    },
+    "cancel_Reason": {
+      "type": "text"
+    }
+  }
+}
