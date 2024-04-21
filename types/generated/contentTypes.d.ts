@@ -959,6 +959,7 @@ export interface ApiProjectProject extends Schema.CollectionType {
     singularName: 'project';
     pluralName: 'projects';
     displayName: 'project';
+    description: '';
   };
   options: {
     draftAndPublish: false;
@@ -966,6 +967,7 @@ export interface ApiProjectProject extends Schema.CollectionType {
   attributes: {
     name: Attribute.String;
     description: Attribute.Text;
+    emp: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
