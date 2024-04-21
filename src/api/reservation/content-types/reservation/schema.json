@@ -1,0 +1,237 @@
+{
+  "kind": "collectionType",
+  "collectionName": "reservations",
+  "info": {
+    "singularName": "reservation",
+    "pluralName": "reservations",
+    "displayName": "reservation"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "auto_serial": {
+      "type": "string"
+    },
+    "timestamp": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "amount": {
+      "type": "integer"
+    },
+    "amount_with_letters": {
+      "type": "string"
+    },
+    "scholarship": {
+      "type": "string"
+    },
+    "code_group1": {
+      "type": "string"
+    },
+    "code_group2": {
+      "type": "string"
+    },
+    "code_group3": {
+      "type": "string"
+    },
+    "code_group4": {
+      "type": "string"
+    },
+    "signature_employee_student": {
+      "type": "string"
+    },
+    "deadline1": {
+      "type": "string"
+    },
+    "deadline2": {
+      "type": "string"
+    },
+    "deadline3": {
+      "type": "string"
+    },
+    "deadline4": {
+      "type": "string"
+    },
+    "graduation_grade": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    },
+    "receptionist": {
+      "type": "string"
+    },
+    "comment": {
+      "type": "string"
+    },
+    "study_type": {
+      "type": "string"
+    },
+    "Re_agent_code": {
+      "type": "string"
+    },
+    "idnational": {
+      "type": "string"
+    },
+    "invoice": {
+      "type": "string"
+    },
+    "student_num": {
+      "type": "string"
+    },
+    "deadline_1_amount": {
+      "type": "string"
+    },
+    "deadline_2_amount": {
+      "type": "string"
+    },
+    "deadline_3_amount": {
+      "type": "string"
+    },
+    "deadline_4_amount": {
+      "type": "string"
+    },
+    "int": {
+      "type": "string"
+    },
+    "religion": {
+      "type": "string"
+    },
+    "date_of_birth": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "cash_type": {
+      "type": "string"
+    },
+    "code_group5": {
+      "type": "string"
+    },
+    "code_group6": {
+      "type": "string"
+    },
+    "code_group7": {
+      "type": "string"
+    },
+    "code_group8": {
+      "type": "string"
+    },
+    "code_group9": {
+      "type": "string"
+    },
+    "code_group10": {
+      "type": "string"
+    },
+    "code_group11": {
+      "type": "string"
+    },
+    "code_group12": {
+      "type": "string"
+    },
+    "deadline5": {
+      "type": "string"
+    },
+    "deadline6": {
+      "type": "string"
+    },
+    "deadline7": {
+      "type": "string"
+    },
+    "deadline8": {
+      "type": "string"
+    },
+    "deadline_5_amount": {
+      "type": "string"
+    },
+    "deadline_6_amount": {
+      "type": "string"
+    },
+    "deadline_7_amount": {
+      "type": "string"
+    },
+    "deadline_8_amount": {
+      "type": "string"
+    },
+    "student_category": {
+      "type": "string"
+    },
+    "month": {
+      "type": "string"
+    },
+    "year": {
+      "type": "string"
+    },
+    "scholarship_code": {
+      "type": "string"
+    },
+    "papers": {
+      "type": "string"
+    },
+    "cc_agent_code": {
+      "type": "string"
+    },
+    "group1_startingdate": {
+      "type": "string"
+    },
+    "group2_startingdate": {
+      "type": "string"
+    },
+    "group3_startingdate": {
+      "type": "string"
+    },
+    "group4_startingdate": {
+      "type": "string"
+    },
+    "group5_startingdate": {
+      "type": "string"
+    },
+    "group6_startingdate": {
+      "type": "string"
+    },
+    "group7_startingdate": {
+      "type": "string"
+    },
+    "group8_startingdate": {
+      "type": "string"
+    },
+    "group9_startingdate": {
+      "type": "string"
+    },
+    "group10_startingdate": {
+      "type": "string"
+    },
+    "group11_startingdate": {
+      "type": "string"
+    },
+    "group12_startingdate": {
+      "type": "string"
+    },
+    "code_group13": {
+      "type": "string"
+    },
+    "code_group14": {
+      "type": "string"
+    },
+    "code_group15": {
+      "type": "string"
+    },
+    "call_agent": {
+      "type": "string"
+    },
+    "reserve_agent": {
+      "type": "string"
+    },
+    "final_st_code": {
+      "type": "string"
+    }
+  }
+}

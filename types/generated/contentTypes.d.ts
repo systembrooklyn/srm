@@ -985,6 +985,108 @@ export interface ApiProjectProject extends Schema.CollectionType {
   };
 }
 
+export interface ApiReservationReservation extends Schema.CollectionType {
+  collectionName: 'reservations';
+  info: {
+    singularName: 'reservation';
+    pluralName: 'reservations';
+    displayName: 'reservation';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    auto_serial: Attribute.String;
+    timestamp: Attribute.String;
+    name: Attribute.String;
+    amount: Attribute.Integer;
+    amount_with_letters: Attribute.String;
+    scholarship: Attribute.String;
+    code_group1: Attribute.String;
+    code_group2: Attribute.String;
+    code_group3: Attribute.String;
+    code_group4: Attribute.String;
+    signature_employee_student: Attribute.String;
+    deadline1: Attribute.String;
+    deadline2: Attribute.String;
+    deadline3: Attribute.String;
+    deadline4: Attribute.String;
+    graduation_grade: Attribute.String;
+    phone: Attribute.String;
+    notes: Attribute.String;
+    receptionist: Attribute.String;
+    comment: Attribute.String;
+    study_type: Attribute.String;
+    Re_agent_code: Attribute.String;
+    idnational: Attribute.String;
+    invoice: Attribute.String;
+    student_num: Attribute.String;
+    deadline_1_amount: Attribute.String;
+    deadline_2_amount: Attribute.String;
+    deadline_3_amount: Attribute.String;
+    deadline_4_amount: Attribute.String;
+    int: Attribute.String;
+    religion: Attribute.String;
+    date_of_birth: Attribute.String;
+    email: Attribute.Email;
+    cash_type: Attribute.String;
+    code_group5: Attribute.String;
+    code_group6: Attribute.String;
+    code_group7: Attribute.String;
+    code_group8: Attribute.String;
+    code_group9: Attribute.String;
+    code_group10: Attribute.String;
+    code_group11: Attribute.String;
+    code_group12: Attribute.String;
+    deadline5: Attribute.String;
+    deadline6: Attribute.String;
+    deadline7: Attribute.String;
+    deadline8: Attribute.String;
+    deadline_5_amount: Attribute.String;
+    deadline_6_amount: Attribute.String;
+    deadline_7_amount: Attribute.String;
+    deadline_8_amount: Attribute.String;
+    student_category: Attribute.String;
+    month: Attribute.String;
+    year: Attribute.String;
+    scholarship_code: Attribute.String;
+    papers: Attribute.String;
+    cc_agent_code: Attribute.String;
+    group1_startingdate: Attribute.String;
+    group2_startingdate: Attribute.String;
+    group3_startingdate: Attribute.String;
+    group4_startingdate: Attribute.String;
+    group5_startingdate: Attribute.String;
+    group6_startingdate: Attribute.String;
+    group7_startingdate: Attribute.String;
+    group8_startingdate: Attribute.String;
+    group9_startingdate: Attribute.String;
+    group10_startingdate: Attribute.String;
+    group11_startingdate: Attribute.String;
+    group12_startingdate: Attribute.String;
+    code_group13: Attribute.String;
+    code_group14: Attribute.String;
+    code_group15: Attribute.String;
+    call_agent: Attribute.String;
+    reserve_agent: Attribute.String;
+    final_st_code: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::reservation.reservation',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::reservation.reservation',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiTaskTask extends Schema.CollectionType {
   collectionName: 'tasks';
   info: {
@@ -1151,6 +1253,7 @@ declare module '@strapi/types' {
       'api::emp.emp': ApiEmpEmp;
       'api::invoice.invoice': ApiInvoiceInvoice;
       'api::project.project': ApiProjectProject;
+      'api::reservation.reservation': ApiReservationReservation;
       'api::task.task': ApiTaskTask;
       'api::task-report.task-report': ApiTaskReportTaskReport;
       'api::today-task.today-task': ApiTodayTaskTodayTask;
