@@ -1,11 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "projects",
+  "collectionName": "projecthistories",
   "info": {
-    "singularName": "project",
-    "pluralName": "projects",
-    "displayName": "project",
-    "description": ""
+    "singularName": "projecthistory",
+    "pluralName": "projecthistories",
+    "displayName": "projecthistory"
   },
   "options": {
     "draftAndPublish": false
@@ -18,10 +17,13 @@
     "description": {
       "type": "text"
     },
-    "emp": {
+    "createby": {
       "type": "string"
     },
     "editby": {
+      "type": "string"
+    },
+    "deleteby": {
       "type": "string"
     }
   }

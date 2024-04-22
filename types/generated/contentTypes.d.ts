@@ -968,6 +968,7 @@ export interface ApiProjectProject extends Schema.CollectionType {
     name: Attribute.String;
     description: Attribute.Text;
     emp: Attribute.String;
+    editby: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
@@ -978,6 +979,39 @@ export interface ApiProjectProject extends Schema.CollectionType {
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::project.project',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiProjecthistoryProjecthistory extends Schema.CollectionType {
+  collectionName: 'projecthistories';
+  info: {
+    singularName: 'projecthistory';
+    pluralName: 'projecthistories';
+    displayName: 'projecthistory';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    name: Attribute.String;
+    description: Attribute.Text;
+    createby: Attribute.String;
+    editby: Attribute.String;
+    deleteby: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::projecthistory.projecthistory',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::projecthistory.projecthistory',
       'oneToOne',
       'admin::user'
     > &
@@ -1253,6 +1287,7 @@ declare module '@strapi/types' {
       'api::emp.emp': ApiEmpEmp;
       'api::invoice.invoice': ApiInvoiceInvoice;
       'api::project.project': ApiProjectProject;
+      'api::projecthistory.projecthistory': ApiProjecthistoryProjecthistory;
       'api::reservation.reservation': ApiReservationReservation;
       'api::task.task': ApiTaskTask;
       'api::task-report.task-report': ApiTaskReportTaskReport;
