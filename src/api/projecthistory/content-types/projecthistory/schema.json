@@ -4,7 +4,8 @@
   "info": {
     "singularName": "projecthistory",
     "pluralName": "projecthistories",
-    "displayName": "projecthistory"
+    "displayName": "projecthistory",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
@@ -24,6 +25,9 @@
       "type": "string"
     },
     "deleteby": {
+      "type": "string"
+    },
+    "status": {
       "type": "string"
     }
   }

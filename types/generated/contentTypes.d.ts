@@ -992,6 +992,7 @@ export interface ApiProjecthistoryProjecthistory extends Schema.CollectionType {
     singularName: 'projecthistory';
     pluralName: 'projecthistories';
     displayName: 'projecthistory';
+    description: '';
   };
   options: {
     draftAndPublish: false;
@@ -1002,6 +1003,7 @@ export interface ApiProjecthistoryProjecthistory extends Schema.CollectionType {
     createby: Attribute.String;
     editby: Attribute.String;
     deleteby: Attribute.String;
+    status: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
@@ -1249,6 +1251,7 @@ export interface ApiToolLinkToolLink extends Schema.CollectionType {
     system_link: Attribute.String;
     system_name: Attribute.String;
     status: Attribute.String;
+    code: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<

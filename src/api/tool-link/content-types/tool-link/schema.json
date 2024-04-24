@@ -26,6 +26,9 @@
     },
     "status": {
       "type": "string"
+    },
+    "code": {
+      "type": "string"
     }
   }
 }
