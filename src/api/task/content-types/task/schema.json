@@ -47,9 +47,6 @@
       "type": "integer",
       "required": false,
       "unique": true
-    },
-    "status": {
-      "type": "string"
     }
   }
 }

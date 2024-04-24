@@ -969,6 +969,7 @@ export interface ApiProjectProject extends Schema.CollectionType {
     description: Attribute.Text;
     emp: Attribute.String;
     editby: Attribute.String;
+    status: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
@@ -1144,7 +1145,6 @@ export interface ApiTaskTask extends Schema.CollectionType {
     fromm: Attribute.String;
     too: Attribute.String;
     task_No: Attribute.Integer & Attribute.Unique;
-    status: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
