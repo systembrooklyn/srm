@@ -1238,6 +1238,7 @@ export interface ApiToolLinkToolLink extends Schema.CollectionType {
     singularName: 'tool-link';
     pluralName: 'tool-links';
     displayName: 'tool_link';
+    description: '';
   };
   options: {
     draftAndPublish: false;
@@ -1247,6 +1248,7 @@ export interface ApiToolLinkToolLink extends Schema.CollectionType {
     fb: Attribute.Integer;
     system_link: Attribute.String;
     system_name: Attribute.String;
+    status: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<

@@ -4,7 +4,8 @@
   "info": {
     "singularName": "tool-link",
     "pluralName": "tool-links",
-    "displayName": "tool_link"
+    "displayName": "tool_link",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
@@ -21,6 +22,9 @@
       "type": "string"
     },
     "system_name": {
+      "type": "string"
+    },
+    "status": {
       "type": "string"
     }
   }
