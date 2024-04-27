@@ -970,6 +970,9 @@ export interface ApiProjectProject extends Schema.CollectionType {
     emp: Attribute.String;
     editby: Attribute.String;
     status: Attribute.String;
+    projectType: Attribute.String;
+    from: Attribute.String;
+    to: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
@@ -1005,6 +1008,9 @@ export interface ApiProjecthistoryProjecthistory extends Schema.CollectionType {
     editby: Attribute.String;
     deleteby: Attribute.String;
     status: Attribute.String;
+    projectType: Attribute.String;
+    from: Attribute.String;
+    to: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
