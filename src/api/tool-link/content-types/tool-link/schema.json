@@ -24,9 +24,6 @@
     "system_name": {
       "type": "string"
     },
-    "status": {
-      "type": "string"
-    },
     "code": {
       "type": "string"
     },

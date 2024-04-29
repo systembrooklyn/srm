@@ -1256,7 +1256,6 @@ export interface ApiToolLinkToolLink extends Schema.CollectionType {
     fb: Attribute.Integer;
     v4_link: Attribute.String;
     system_name: Attribute.String;
-    status: Attribute.String;
     code: Attribute.String;
     res_link: Attribute.String;
     createdAt: Attribute.DateTime;
