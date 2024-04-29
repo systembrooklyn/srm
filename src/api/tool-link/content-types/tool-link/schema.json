@@ -21,9 +21,6 @@
     "v4_link": {
       "type": "string"
     },
-    "system_name": {
-      "type": "string"
-    },
     "code": {
       "type": "string"
     },
