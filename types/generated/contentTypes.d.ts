@@ -953,6 +953,43 @@ export interface ApiInvoiceInvoice extends Schema.CollectionType {
   };
 }
 
+export interface ApiOnetaskOnetask extends Schema.CollectionType {
+  collectionName: 'onetasks';
+  info: {
+    singularName: 'onetask';
+    pluralName: 'onetasks';
+    displayName: 'onetask';
+    description: '';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    name: Attribute.String;
+    description: Attribute.Text;
+    product: Attribute.String;
+    label: Attribute.String;
+    assign_to: Attribute.String;
+    start: Attribute.String;
+    deadline: Attribute.String;
+    supervisor: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::onetask.onetask',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::onetask.onetask',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiProjectProject extends Schema.CollectionType {
   collectionName: 'projects';
   info: {
@@ -1296,6 +1333,7 @@ declare module '@strapi/types' {
       'api::basic-test.basic-test': ApiBasicTestBasicTest;
       'api::emp.emp': ApiEmpEmp;
       'api::invoice.invoice': ApiInvoiceInvoice;
+      'api::onetask.onetask': ApiOnetaskOnetask;
       'api::project.project': ApiProjectProject;
       'api::projecthistory.projecthistory': ApiProjecthistoryProjecthistory;
       'api::reservation.reservation': ApiReservationReservation;

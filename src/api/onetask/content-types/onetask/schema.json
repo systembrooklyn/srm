@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "onetasks",
+  "info": {
+    "singularName": "onetask",
+    "pluralName": "onetasks",
+    "displayName": "onetask",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "product": {
+      "type": "string"
+    },
+    "label": {
+      "type": "string"
+    },
+    "assign_to": {
+      "type": "string"
+    },
+    "start": {
+      "type": "string"
+    },
+    "deadline": {
+      "type": "string"
+    },
+    "supervisor": {
+      "type": "string"
+    }
+  }
+}
