@@ -967,7 +967,7 @@ export interface ApiOnetaskOnetask extends Schema.CollectionType {
   attributes: {
     name: Attribute.String;
     description: Attribute.Text;
-    product: Attribute.String;
+    project: Attribute.String;
     label: Attribute.String;
     assign_to: Attribute.String;
     start: Attribute.String;

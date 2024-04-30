@@ -18,7 +18,7 @@
     "description": {
       "type": "text"
     },
-    "product": {
+    "project": {
       "type": "string"
     },
     "label": {
