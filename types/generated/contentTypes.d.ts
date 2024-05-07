@@ -899,7 +899,7 @@ export interface ApiEmpEmp extends Schema.CollectionType {
     description: '';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
     userName: Attribute.String & Attribute.Required;
@@ -909,7 +909,6 @@ export interface ApiEmpEmp extends Schema.CollectionType {
     department: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<'api::emp.emp', 'oneToOne', 'admin::user'> &
       Attribute.Private;
     updatedBy: Attribute.Relation<'api::emp.emp', 'oneToOne', 'admin::user'> &
