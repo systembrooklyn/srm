@@ -35,6 +35,13 @@
     },
     "supervisor": {
       "type": "string"
+    },
+    "is_archive": {
+      "type": "boolean",
+      "default": false
+    },
+    "taskOwner": {
+      "type": "string"
     }
   }
 }
