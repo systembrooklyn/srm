@@ -42,6 +42,9 @@
     },
     "taskOwner": {
       "type": "string"
+    },
+    "is_star": {
+      "type": "boolean"
     }
   }
 }
