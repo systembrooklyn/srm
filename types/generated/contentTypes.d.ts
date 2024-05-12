@@ -905,6 +905,7 @@ export interface ApiCallDetailCallDetail extends Schema.CollectionType {
     serial: Attribute.String;
     date: Attribute.String;
     empolyeeName: Attribute.String;
+    empCode: Attribute.String;
     scholarshipCode: Attribute.String;
     callsCount: Attribute.String;
     createdAt: Attribute.DateTime;

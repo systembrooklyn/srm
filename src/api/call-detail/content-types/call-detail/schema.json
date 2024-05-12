@@ -21,6 +21,9 @@
     "empolyeeName": {
       "type": "string"
     },
+    "empCode": {
+      "type": "string"
+    },
     "scholarshipCode": {
       "type": "string"
     },
