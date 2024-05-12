@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "call_details",
+  "info": {
+    "singularName": "call-detail",
+    "pluralName": "call-details",
+    "displayName": "callDetail"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "serial_Api": {
+      "type": "string"
+    },
+    "call_api": {
+      "type": "string"
+    }
+  }
+}

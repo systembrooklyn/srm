@@ -890,6 +890,36 @@ export interface ApiBasicTestBasicTest extends Schema.CollectionType {
   };
 }
 
+export interface ApiCallDetailCallDetail extends Schema.CollectionType {
+  collectionName: 'call_details';
+  info: {
+    singularName: 'call-detail';
+    pluralName: 'call-details';
+    displayName: 'callDetail';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    serial_Api: Attribute.String;
+    call_api: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::call-detail.call-detail',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::call-detail.call-detail',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiEmpEmp extends Schema.CollectionType {
   collectionName: 'emps';
   info: {
@@ -1333,6 +1363,7 @@ declare module '@strapi/types' {
       'plugin::i18n.locale': PluginI18NLocale;
       'api::basic.basic': ApiBasicBasic;
       'api::basic-test.basic-test': ApiBasicTestBasicTest;
+      'api::call-detail.call-detail': ApiCallDetailCallDetail;
       'api::emp.emp': ApiEmpEmp;
       'api::invoice.invoice': ApiInvoiceInvoice;
       'api::onetask.onetask': ApiOnetaskOnetask;
