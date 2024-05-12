@@ -896,13 +896,17 @@ export interface ApiCallDetailCallDetail extends Schema.CollectionType {
     singularName: 'call-detail';
     pluralName: 'call-details';
     displayName: 'callDetail';
+    description: '';
   };
   options: {
     draftAndPublish: false;
   };
   attributes: {
-    serial_Api: Attribute.String;
-    call_api: Attribute.String;
+    serial: Attribute.String;
+    date: Attribute.String;
+    empolyeeName: Attribute.String;
+    scholarshipCode: Attribute.String;
+    callsCount: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<

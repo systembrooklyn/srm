@@ -4,17 +4,27 @@
   "info": {
     "singularName": "call-detail",
     "pluralName": "call-details",
-    "displayName": "callDetail"
+    "displayName": "callDetail",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
-    "serial_Api": {
+    "serial": {
       "type": "string"
     },
-    "call_api": {
+    "date": {
+      "type": "string"
+    },
+    "empolyeeName": {
+      "type": "string"
+    },
+    "scholarshipCode": {
+      "type": "string"
+    },
+    "callsCount": {
       "type": "string"
     }
   }
