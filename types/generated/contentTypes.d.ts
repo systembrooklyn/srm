@@ -926,6 +926,37 @@ export interface ApiCallDetailCallDetail extends Schema.CollectionType {
   };
 }
 
+export interface ApiCommentComment extends Schema.CollectionType {
+  collectionName: 'comments';
+  info: {
+    singularName: 'comment';
+    pluralName: 'comments';
+    displayName: 'comment';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    taskID: Attribute.Integer;
+    comment: Attribute.Text;
+    user: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::comment.comment',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::comment.comment',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiEmpEmp extends Schema.CollectionType {
   collectionName: 'emps';
   info: {
@@ -1370,6 +1401,7 @@ declare module '@strapi/types' {
       'api::basic.basic': ApiBasicBasic;
       'api::basic-test.basic-test': ApiBasicTestBasicTest;
       'api::call-detail.call-detail': ApiCallDetailCallDetail;
+      'api::comment.comment': ApiCommentComment;
       'api::emp.emp': ApiEmpEmp;
       'api::invoice.invoice': ApiInvoiceInvoice;
       'api::onetask.onetask': ApiOnetaskOnetask;
