@@ -908,6 +908,7 @@ export interface ApiCallDetailCallDetail extends Schema.CollectionType {
     empCode: Attribute.String;
     scholarshipCode: Attribute.String;
     callsCount: Attribute.String;
+    call_api: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<

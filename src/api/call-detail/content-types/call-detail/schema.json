@@ -29,6 +29,9 @@
     },
     "callsCount": {
       "type": "string"
+    },
+    "call_api": {
+      "type": "string"
     }
   }
 }
