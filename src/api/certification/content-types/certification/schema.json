@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "certifications",
+  "info": {
+    "singularName": "certification",
+    "pluralName": "certifications",
+    "displayName": "certification"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "graduateID": {
+      "type": "integer"
+    },
+    "name": {
+      "type": "string"
+    },
+    "certificate": {
+      "type": "string"
+    },
+    "graduationDate": {
+      "type": "string"
+    }
+  }
+}

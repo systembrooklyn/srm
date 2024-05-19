@@ -926,6 +926,38 @@ export interface ApiCallDetailCallDetail extends Schema.CollectionType {
   };
 }
 
+export interface ApiCertificationCertification extends Schema.CollectionType {
+  collectionName: 'certifications';
+  info: {
+    singularName: 'certification';
+    pluralName: 'certifications';
+    displayName: 'certification';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    graduateID: Attribute.Integer;
+    name: Attribute.String;
+    certificate: Attribute.String;
+    graduationDate: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::certification.certification',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::certification.certification',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiCommentComment extends Schema.CollectionType {
   collectionName: 'comments';
   info: {
@@ -1401,6 +1433,7 @@ declare module '@strapi/types' {
       'api::basic.basic': ApiBasicBasic;
       'api::basic-test.basic-test': ApiBasicTestBasicTest;
       'api::call-detail.call-detail': ApiCallDetailCallDetail;
+      'api::certification.certification': ApiCertificationCertification;
       'api::comment.comment': ApiCommentComment;
       'api::emp.emp': ApiEmpEmp;
       'api::invoice.invoice': ApiInvoiceInvoice;
