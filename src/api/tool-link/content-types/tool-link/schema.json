@@ -26,6 +26,9 @@
     },
     "res_link": {
       "type": "string"
+    },
+    "resEditScreen": {
+      "type": "string"
     }
   }
 }

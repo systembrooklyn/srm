@@ -1395,6 +1395,7 @@ export interface ApiToolLinkToolLink extends Schema.CollectionType {
     v4_link: Attribute.String;
     code: Attribute.String;
     res_link: Attribute.String;
+    resEditScreen: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
