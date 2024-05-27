@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "user_tasks",
+  "info": {
+    "singularName": "user-task",
+    "pluralName": "user-tasks",
+    "displayName": "user_task"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "user": {
+      "type": "string"
+    },
+    "taskID": {
+      "type": "integer"
+    },
+    "is_archive": {
+      "type": "boolean"
+    },
+    "is_star": {
+      "type": "boolean"
+    }
+  }
+}

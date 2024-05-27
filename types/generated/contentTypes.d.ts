@@ -1413,6 +1413,38 @@ export interface ApiToolLinkToolLink extends Schema.CollectionType {
   };
 }
 
+export interface ApiUserTaskUserTask extends Schema.CollectionType {
+  collectionName: 'user_tasks';
+  info: {
+    singularName: 'user-task';
+    pluralName: 'user-tasks';
+    displayName: 'user_task';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    user: Attribute.String;
+    taskID: Attribute.Integer;
+    is_archive: Attribute.Boolean;
+    is_star: Attribute.Boolean;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::user-task.user-task',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::user-task.user-task',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -1446,6 +1478,7 @@ declare module '@strapi/types' {
       'api::task-report.task-report': ApiTaskReportTaskReport;
       'api::today-task.today-task': ApiTodayTaskTodayTask;
       'api::tool-link.tool-link': ApiToolLinkToolLink;
+      'api::user-task.user-task': ApiUserTaskUserTask;
     }
   }
 }
