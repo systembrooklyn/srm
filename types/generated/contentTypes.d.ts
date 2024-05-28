@@ -1074,6 +1074,9 @@ export interface ApiOnetaskOnetask extends Schema.CollectionType {
     is_archive: Attribute.Boolean & Attribute.DefaultTo<false>;
     taskOwner: Attribute.String;
     is_star: Attribute.Boolean;
+    is_assign_archive: Attribute.Boolean;
+    is_owner_archive: Attribute.Boolean;
+    is_super_archive: Attribute.Boolean;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
