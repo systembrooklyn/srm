@@ -54,6 +54,18 @@
     },
     "is_super_archive": {
       "type": "boolean"
+    },
+    "is_assign_star": {
+      "type": "boolean",
+      "default": false
+    },
+    "is_owner_star": {
+      "type": "boolean",
+      "default": false
+    },
+    "is_super_star": {
+      "type": "boolean",
+      "default": false
     }
   }
 }
