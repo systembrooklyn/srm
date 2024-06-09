@@ -66,6 +66,10 @@
     "is_super_star": {
       "type": "boolean",
       "default": false
+    },
+    "isDone": {
+      "type": "boolean",
+      "default": false
     }
   }
 }
