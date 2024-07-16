@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "traveldetails",
+  "info": {
+    "singularName": "travel-details",
+    "pluralName": "traveldetails",
+    "displayName": "travelDetails"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "TravelName": {
+      "type": "string"
+    },
+    "TravelDate": {
+      "type": "date"
+    },
+    "BackDate": {
+      "type": "date"
+    },
+    "MoveFrom": {
+      "type": "string"
+    },
+    "BackFrom": {
+      "type": "string"
+    },
+    "TravelDetails": {
+      "type": "text"
+    },
+    "Individual": {
+      "type": "string"
+    },
+    "Double": {
+      "type": "string"
+    },
+    "Triple": {
+      "type": "string"
+    },
+    "QuadrupleQuintuple": {
+      "type": "string"
+    }
+  }
+}
