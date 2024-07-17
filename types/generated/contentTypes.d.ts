@@ -974,6 +974,7 @@ export interface ApiCommentComment extends Schema.CollectionType {
     comment: Attribute.Text;
     user: Attribute.String;
     attach: Attribute.Media;
+    isOpen: Attribute.Boolean & Attribute.DefaultTo<false>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
