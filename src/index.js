@@ -54,13 +54,10 @@ module.exports = {
 
     io.on('connection', (socket) => {
       console.log('a user connected' + socket.id);
-
-
-
-
       socket.on('comment_added', (comment) => {
         // console.log('comment_added', comment)
         // io.sockets.emit('comment_added', comment);
+        socket.broadcast.emit('comment_added', comment)
       })
 
       socket.on('disconnect', () => {
