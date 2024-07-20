@@ -1009,6 +1009,7 @@ export interface ApiEmpEmp extends Schema.CollectionType {
     role: Attribute.String & Attribute.Required;
     code: Attribute.String & Attribute.Required;
     department: Attribute.String;
+    renderName: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<'api::emp.emp', 'oneToOne', 'admin::user'> &

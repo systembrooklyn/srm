@@ -31,6 +31,9 @@
     "department": {
       "type": "string",
       "required": false
+    },
+    "renderName": {
+      "type": "string"
     }
   }
 }
