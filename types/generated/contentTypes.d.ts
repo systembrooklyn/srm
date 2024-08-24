@@ -973,7 +973,7 @@ export interface ApiCommentComment extends Schema.CollectionType {
     taskID: Attribute.Integer;
     comment: Attribute.Text;
     user: Attribute.String;
-    attach: Attribute.Media;
+    attachment: Attribute.Media;
     isOpen: Attribute.Boolean & Attribute.DefaultTo<false>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
