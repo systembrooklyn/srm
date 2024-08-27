@@ -74,6 +74,10 @@
     "isOpen": {
       "type": "boolean",
       "default": false
+    },
+    "is_urgent": {
+      "type": "boolean",
+      "default": false
     }
   }
 }

@@ -1086,6 +1086,7 @@ export interface ApiOnetaskOnetask extends Schema.CollectionType {
     is_super_star: Attribute.Boolean & Attribute.DefaultTo<false>;
     isDone: Attribute.Boolean & Attribute.DefaultTo<false>;
     isOpen: Attribute.Boolean & Attribute.DefaultTo<false>;
+    is_urgent: Attribute.Boolean & Attribute.DefaultTo<false>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
