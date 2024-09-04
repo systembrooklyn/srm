@@ -78,6 +78,9 @@
     "is_urgent": {
       "type": "boolean",
       "default": false
+    },
+    "priority": {
+      "type": "string"
     }
   }
 }

@@ -1,19 +1,18 @@
 module.exports = ({ env }) => ({
-    email: {
-      provider: 'smtp', // نستخدم SMTP كـ provider لإرسال الإيميلات
-      providerOptions: {
-        host: 'smtp.gmail.com', // عنوان SMTP server - هنا بنستخدم Gmail
-        port: 587, // البورت الخاص بـ Gmail SMTP
-        secure: false, // False للـ TLS
-        auth: {
-          user: env('GMAIL_USER'), // البريد الإلكتروني اللي هيتم الإرسال منه
-          pass: env('GMAIL_PASS'), // كلمة المرور أو App password للبريد
-        },
-      },
-      settings: {
-        defaultFrom: env('GMAIL_USER'), // البريد اللي هتظهر منه الإيميلات
-        defaultReplyTo: env('GMAIL_USER'), // البريد اللي هيترد عليه
+  email: {
+    provider: 'smtp', // نستخدم SMTP كموفر لإرسال الإيميلات
+    providerOptions: {
+      host: 'smtp.sendgrid.net', // عنوان SMTP server لـ SendGrid
+      port: 465, // استخدم 587 للاتصالات غير المشفرة / TLS
+      secure: false, // False للـ TLS
+      auth: {
+        user: 'apikey', // هذا هو اسم المستخدم لـ SendGrid ويجب أن يبقى كما هو
+        pass: env('SENDGRID_API_KEY'), // كلمة المرور هي الـ API Key الخاصة بك من SendGrid
       },
     },
-  });
-  
+    settings: {
+      defaultFrom: 'System@brooklynacademy.net', // البريد الذي سترسل منه الرسائل
+      defaultReplyTo: 'ahmed.amr61991@gmail.com', // البريد الذي سيتم الرد عليه
+    },
+  },
+});

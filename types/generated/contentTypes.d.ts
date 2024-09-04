@@ -1087,6 +1087,7 @@ export interface ApiOnetaskOnetask extends Schema.CollectionType {
     isDone: Attribute.Boolean & Attribute.DefaultTo<false>;
     isOpen: Attribute.Boolean & Attribute.DefaultTo<false>;
     is_urgent: Attribute.Boolean & Attribute.DefaultTo<false>;
+    priority: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
