@@ -1413,6 +1413,7 @@ export interface ApiToolLinkToolLink extends Schema.CollectionType {
     res_link: Attribute.String;
     resEditScreen: Attribute.String;
     DeleteReceipt: Attribute.String;
+    auto_reservation: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<

@@ -32,6 +32,9 @@
     },
     "DeleteReceipt": {
       "type": "string"
+    },
+    "auto_reservation": {
+      "type": "string"
     }
   }
 }
