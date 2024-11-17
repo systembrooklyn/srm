@@ -1055,6 +1055,41 @@ export interface ApiInvoiceInvoice extends Schema.CollectionType {
   };
 }
 
+export interface ApiMAppUserMAppUser extends Schema.CollectionType {
+  collectionName: 'm_app_users';
+  info: {
+    singularName: 'm-app-user';
+    pluralName: 'm-app-users';
+    displayName: 'm_app_user';
+    description: '';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    name: Attribute.String;
+    stID: Attribute.BigInteger;
+    email: Attribute.Email;
+    phone: Attribute.Text;
+    password: Attribute.Password;
+    ppURL: Attribute.Text;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::m-app-user.m-app-user',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::m-app-user.m-app-user',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiOnetaskOnetask extends Schema.CollectionType {
   collectionName: 'onetasks';
   info: {
@@ -1494,6 +1529,7 @@ declare module '@strapi/types' {
       'api::comment.comment': ApiCommentComment;
       'api::emp.emp': ApiEmpEmp;
       'api::invoice.invoice': ApiInvoiceInvoice;
+      'api::m-app-user.m-app-user': ApiMAppUserMAppUser;
       'api::onetask.onetask': ApiOnetaskOnetask;
       'api::project.project': ApiProjectProject;
       'api::projecthistory.projecthistory': ApiProjecthistoryProjecthistory;

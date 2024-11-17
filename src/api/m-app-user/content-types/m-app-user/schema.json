@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "m_app_users",
+  "info": {
+    "singularName": "m-app-user",
+    "pluralName": "m-app-users",
+    "displayName": "m_app_user",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "stID": {
+      "type": "biginteger"
+    },
+    "email": {
+      "type": "email"
+    },
+    "phone": {
+      "type": "text"
+    },
+    "password": {
+      "type": "password"
+    },
+    "ppURL": {
+      "type": "text"
+    }
+  }
+}
