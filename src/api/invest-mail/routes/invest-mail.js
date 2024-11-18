@@ -13,7 +13,7 @@ module.exports = {
     routes: [
       {
         method: 'POST',
-        path: '/invest-mail',
+        path: '/invest-mails',
         handler: 'invest-mail.create',
         config: {
           auth: false,
