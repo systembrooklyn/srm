@@ -28,6 +28,16 @@ module.exports = createCoreController('api::invest-mail.invest-mail', ({ strapi 
         console.error('Internal Server Error:', error);
         ctx.throw(500, 'Internal Server Error');
       }
-    }
+    }, 
+    
+    async find(ctx) {
+      try {
+        const response = await strapi.service('api::invest-mail.invest-mail').find();
+        return ctx.send(response);
+      } catch (error) {
+        console.error('Internal Server Error:', error);
+        ctx.throw(500, 'Internal Server Error');
+      }
+    },
   }));
   

@@ -12,12 +12,20 @@ module.exports = {
     
     routes: [
       {
-        method: 'POST',
-        path: '/invest-mails',
-        handler: 'invest-mail.create',
-        config: {
-          auth: false,
-        },
+        "method": "GET",
+        "path": "/invest-mails",
+        "handler": "invest-mail.find",
+        "config": {
+          "policies": []
+        }
       },
+      {
+        "method": "POST",
+        "path": "/invest-mails",
+        "handler": "invest-mail.create",
+        "config": {
+          "policies": []
+        }
+      }
     ],
 }
