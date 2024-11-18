@@ -12,7 +12,7 @@ module.exports = ({ env }) => ({
     },
     settings: {
       defaultFrom: 'System@brooklynacademy.net', // البريد الذي سترسل منه الرسائل
-      defaultReplyTo: 'ahmed.amr61991@gmail.com', // البريد الذي سيتم الرد عليه
+      defaultReplyTo: 'ahmed.amr61991@gmail.com', // البريد الذي سيتم الرد علي ه
     },
   },
 });

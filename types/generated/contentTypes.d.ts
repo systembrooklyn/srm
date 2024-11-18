@@ -1019,6 +1019,37 @@ export interface ApiEmpEmp extends Schema.CollectionType {
   };
 }
 
+export interface ApiInvestMailInvestMail extends Schema.CollectionType {
+  collectionName: 'invest_mails';
+  info: {
+    singularName: 'invest-mail';
+    pluralName: 'invest-mails';
+    displayName: 'investMail';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    email: Attribute.Email;
+    projectName: Attribute.String;
+    score: Attribute.Integer;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::invest-mail.invest-mail',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::invest-mail.invest-mail',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiInvoiceInvoice extends Schema.CollectionType {
   collectionName: 'invoices';
   info: {
@@ -1528,6 +1559,7 @@ declare module '@strapi/types' {
       'api::certification.certification': ApiCertificationCertification;
       'api::comment.comment': ApiCommentComment;
       'api::emp.emp': ApiEmpEmp;
+      'api::invest-mail.invest-mail': ApiInvestMailInvestMail;
       'api::invoice.invoice': ApiInvoiceInvoice;
       'api::m-app-user.m-app-user': ApiMAppUserMAppUser;
       'api::onetask.onetask': ApiOnetaskOnetask;

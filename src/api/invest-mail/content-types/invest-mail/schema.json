@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "invest_mails",
+  "info": {
+    "singularName": "invest-mail",
+    "pluralName": "invest-mails",
+    "displayName": "investMail"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "email": {
+      "type": "email"
+    },
+    "projectName": {
+      "type": "string"
+    },
+    "score": {
+      "type": "integer"
+    }
+  }
+}
