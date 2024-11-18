@@ -16,8 +16,7 @@ module.exports = {
         path: '/invest-mail',
         handler: 'invest-mail.create',
         config: {
-          policies: [],
-          middlewares: [],
+          auth: false,
         },
       },
     ],
