@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "payment_mobile_apps",
+  "info": {
+    "singularName": "payment-mobile-app",
+    "pluralName": "payment-mobile-apps",
+    "displayName": "PaymentMobileApp"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "stID": {
+      "type": "biginteger"
+    },
+    "amount": {
+      "type": "biginteger"
+    },
+    "DueDate": {
+      "type": "date"
+    },
+    "PaidDate": {
+      "type": "date"
+    },
+    "PaidAmount": {
+      "type": "biginteger"
+    },
+    "Status": {
+      "type": "text"
+    },
+    "TotalPayment": {
+      "type": "string"
+    }
+  }
+}

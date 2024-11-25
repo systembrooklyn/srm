@@ -1173,6 +1173,42 @@ export interface ApiOnetaskOnetask extends Schema.CollectionType {
   };
 }
 
+export interface ApiPaymentMobileAppPaymentMobileApp
+  extends Schema.CollectionType {
+  collectionName: 'payment_mobile_apps';
+  info: {
+    singularName: 'payment-mobile-app';
+    pluralName: 'payment-mobile-apps';
+    displayName: 'PaymentMobileApp';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    stID: Attribute.BigInteger;
+    amount: Attribute.BigInteger;
+    DueDate: Attribute.Date;
+    PaidDate: Attribute.Date;
+    PaidAmount: Attribute.BigInteger;
+    Status: Attribute.Text;
+    TotalPayment: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::payment-mobile-app.payment-mobile-app',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::payment-mobile-app.payment-mobile-app',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiProjectProject extends Schema.CollectionType {
   collectionName: 'projects';
   info: {
@@ -1563,6 +1599,7 @@ declare module '@strapi/types' {
       'api::invoice.invoice': ApiInvoiceInvoice;
       'api::m-app-user.m-app-user': ApiMAppUserMAppUser;
       'api::onetask.onetask': ApiOnetaskOnetask;
+      'api::payment-mobile-app.payment-mobile-app': ApiPaymentMobileAppPaymentMobileApp;
       'api::project.project': ApiProjectProject;
       'api::projecthistory.projecthistory': ApiProjecthistoryProjecthistory;
       'api::reservation.reservation': ApiReservationReservation;
