@@ -4,7 +4,8 @@
   "info": {
     "singularName": "payment-mobile-app",
     "pluralName": "payment-mobile-apps",
-    "displayName": "PaymentMobileApp"
+    "displayName": "PaymentMobileApp",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
@@ -17,12 +18,6 @@
     "amount": {
       "type": "biginteger"
     },
-    "DueDate": {
-      "type": "date"
-    },
-    "PaidDate": {
-      "type": "date"
-    },
     "PaidAmount": {
       "type": "biginteger"
     },
@@ -30,6 +25,12 @@
       "type": "text"
     },
     "TotalPayment": {
+      "type": "string"
+    },
+    "due_date": {
+      "type": "string"
+    },
+    "paid_date": {
       "type": "string"
     }
   }

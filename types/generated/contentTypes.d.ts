@@ -1180,6 +1180,7 @@ export interface ApiPaymentMobileAppPaymentMobileApp
     singularName: 'payment-mobile-app';
     pluralName: 'payment-mobile-apps';
     displayName: 'PaymentMobileApp';
+    description: '';
   };
   options: {
     draftAndPublish: false;
@@ -1187,11 +1188,11 @@ export interface ApiPaymentMobileAppPaymentMobileApp
   attributes: {
     stID: Attribute.BigInteger;
     amount: Attribute.BigInteger;
-    DueDate: Attribute.Date;
-    PaidDate: Attribute.Date;
     PaidAmount: Attribute.BigInteger;
     Status: Attribute.Text;
     TotalPayment: Attribute.String;
+    due_date: Attribute.String;
+    paid_date: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
