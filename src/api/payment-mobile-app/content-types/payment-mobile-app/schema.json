@@ -15,12 +15,6 @@
     "stID": {
       "type": "biginteger"
     },
-    "amount": {
-      "type": "biginteger"
-    },
-    "PaidAmount": {
-      "type": "biginteger"
-    },
     "Status": {
       "type": "text"
     },
@@ -31,6 +25,12 @@
       "type": "string"
     },
     "paid_date": {
+      "type": "string"
+    },
+    "amount": {
+      "type": "string"
+    },
+    "PaidAmount": {
       "type": "string"
     }
   }

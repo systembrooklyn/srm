@@ -1187,12 +1187,12 @@ export interface ApiPaymentMobileAppPaymentMobileApp
   };
   attributes: {
     stID: Attribute.BigInteger;
-    amount: Attribute.BigInteger;
-    PaidAmount: Attribute.BigInteger;
     Status: Attribute.Text;
     TotalPayment: Attribute.String;
     due_date: Attribute.String;
     paid_date: Attribute.String;
+    amount: Attribute.String;
+    PaidAmount: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
