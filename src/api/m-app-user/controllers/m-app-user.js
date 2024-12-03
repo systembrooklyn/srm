@@ -14,26 +14,33 @@ module.exports = createCoreController(
       if (ctx.request.method !== "POST") {
         return ctx.badRequest("This endpoint only accepts POST requests.");
       }
-      const { email, password } = ctx.request.body;
+      const { stId, email, password } = ctx.request.body;
     
-      if (!email || !password) {
-        return ctx.badRequest("Email and password are required.");
+      
+
+      if (!password) {
+        return ctx.badRequest("Password is required.");
       }
+
+      
+      
     
       // البحث عن المستخدم بناءً على البريد الإلكتروني
-      const user = await strapi.db.query("api::m-app-user.m-app-user").findOne({
-        where: { email: email },
-        select: ["email", "password", "name", "stID", "phone", "ppURL"],
-      });
-    
-      // إذا لم يتم العثور على المستخدم
+      if (email) {
+        if (!email) {
+          return ctx.badRequest("Email is required.");
+        }
+        const user = await strapi.db.query("api::m-app-user.m-app-user").findOne({
+          where: { email: email },
+          select: ["email", "password", "name", "stID", "phone", "ppURL"],
+        });
+        // إذا لم يتم العثور على المستخدم
       if (!user) {
         return ctx.send({
           success: false,
           message: "البريد الإلكتروني غير موجود.",
         });
       }
-    
       // مقارنة كلمة المرور
       if (password !== user.password) {
         return ctx.send({ success: false, message: "كلمة المرور غير صحيحة." });
@@ -58,6 +65,47 @@ module.exports = createCoreController(
         user,
         payments,
       });
+
+      } else if (stId) {
+
+        if (!stId) {
+          return ctx.badRequest("student ID is required.");
+        }
+
+
+        // البحث عن المستخدم بناءً على stID
+        const user = await strapi.db.query("api::m-app-user.m-app-user").findOne({
+          where: { stID: stId },
+          select: ["email", "password", "name", "stID", "phone", "ppURL"],
+        });
+        // إذا لم يتم العثور على المستخدم
+        if (!user) {
+          return ctx.send({
+            success: false,
+            message: "البريد الإلكتروني غير موجود.",
+          });
+        }
+        // استخراج stID من بيانات المستخدم
+        const { stID } = user;
+    
+        // البحث عن المدفوعات بناءً على stID
+        const payments = await strapi.db.query("api::payment-mobile-app.payment-mobile-app").findMany({
+          where: { stID: stID },
+          select: ["stID", "Status", "TotalPayment", "due_date", "paid_date", "amount", "PaidAmount"],
+        });
+    
+        // حذف كلمة المرور قبل إرجاع البيانات
+        delete user.password;
+    
+        // إرجاع البيانات مع المدفوعات
+        return ctx.send({
+          success: true,
+          message: "تسجيل الدخول ناجح.",
+          user,
+          payments,
+        });
+      }
+    
     },
     
     async create(ctx) {

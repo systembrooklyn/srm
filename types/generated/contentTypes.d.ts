@@ -1387,6 +1387,34 @@ export interface ApiReservationReservation extends Schema.CollectionType {
   };
 }
 
+export interface ApiScheduleMAppScheduleMApp extends Schema.CollectionType {
+  collectionName: 'schedule_m_apps';
+  info: {
+    singularName: 'schedule-m-app';
+    pluralName: 'schedule-m-apps';
+    displayName: 'scheduleMApp';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::schedule-m-app.schedule-m-app',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::schedule-m-app.schedule-m-app',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiTaskTask extends Schema.CollectionType {
   collectionName: 'tasks';
   info: {
@@ -1604,6 +1632,7 @@ declare module '@strapi/types' {
       'api::project.project': ApiProjectProject;
       'api::projecthistory.projecthistory': ApiProjecthistoryProjecthistory;
       'api::reservation.reservation': ApiReservationReservation;
+      'api::schedule-m-app.schedule-m-app': ApiScheduleMAppScheduleMApp;
       'api::task.task': ApiTaskTask;
       'api::task-report.task-report': ApiTaskReportTaskReport;
       'api::today-task.today-task': ApiTodayTaskTodayTask;

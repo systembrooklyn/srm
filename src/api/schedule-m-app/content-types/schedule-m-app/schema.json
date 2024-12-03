@@ -1,0 +1,14 @@
+{
+  "kind": "collectionType",
+  "collectionName": "schedule_m_apps",
+  "info": {
+    "singularName": "schedule-m-app",
+    "pluralName": "schedule-m-apps",
+    "displayName": "scheduleMApp"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {}
+}
