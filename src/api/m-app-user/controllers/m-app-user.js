@@ -160,5 +160,14 @@ module.exports = createCoreController(
       });
       return ctx.send(response);
     },
+
+    async forgetPassword(ctx) {
+      const { stId } = ctx.request.body;
+      const user = await strapi.db.query("api::m-app-user.m-app-user").findOne({
+        where: { stID: stId },
+        select: ["password"],
+      });      
+      return ctx.send({user});
+    },
   })
 );

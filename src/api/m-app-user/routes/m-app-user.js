@@ -58,5 +58,13 @@ module.exports = {
         policies: [],
       },
     },
+    {
+      method: "POST",
+      path: "/m-app-users/forget-password",
+      handler: "m-app-user.forgetPassword",
+      config: {
+        policies: [],
+      },
+    },
   ],
 };
