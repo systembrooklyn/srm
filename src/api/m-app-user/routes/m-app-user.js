@@ -60,7 +60,7 @@ module.exports = {
     },
     {
       method: "POST",
-      path: "/m-app-users/forget-password",
+      path: "/m-app-users/forget-passwords",
       handler: "m-app-user.forgetPassword",
       config: {
         policies: [],

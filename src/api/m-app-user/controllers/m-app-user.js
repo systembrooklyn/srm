@@ -5,6 +5,9 @@
  */
 
 const { createCoreController } = require("@strapi/strapi").factories;
+const jwt = require("jsonwebtoken");
+require('dotenv').config(); // لتحميل المتغيرات من ملف .env
+
 
 module.exports = createCoreController(
   "api::m-app-user.m-app-user",
@@ -57,6 +60,9 @@ module.exports = createCoreController(
     
       // حذف كلمة المرور قبل إرجاع البيانات
       delete user.password;
+
+      const token = jwt.sign({ stID: user.stID, email: user.email }, process.env.JWT_SECRET);
+
     
       // إرجاع البيانات مع المدفوعات
       return ctx.send({
@@ -64,6 +70,7 @@ module.exports = createCoreController(
         message: "تسجيل الدخول ناجح.",
         user,
         payments,
+        token
       });
 
       } else if (stId) {
@@ -96,6 +103,9 @@ module.exports = createCoreController(
     
         // حذف كلمة المرور قبل إرجاع البيانات
         delete user.password;
+
+        const token = jwt.sign({ stID: user.stID, email: user.email }, process.env.JWT_SECRET);
+
     
         // إرجاع البيانات مع المدفوعات
         return ctx.send({
@@ -103,6 +113,7 @@ module.exports = createCoreController(
           message: "تسجيل الدخول ناجح.",
           user,
           payments,
+          token
         });
       }
     
@@ -165,7 +176,7 @@ module.exports = createCoreController(
       const { stId } = ctx.request.body;
       const user = await strapi.db.query("api::m-app-user.m-app-user").findOne({
         where: { stID: stId },
-        select: ["password" , "email"],
+        select: ["password"],
       });      
       return ctx.send({user});
     },
