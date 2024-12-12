@@ -176,7 +176,7 @@ module.exports = createCoreController(
       const { stId } = ctx.request.body;
       const user = await strapi.db.query("api::m-app-user.m-app-user").findOne({
         where: { stID: stId },
-        select: ["password"],
+        select: ["password" , "email"],
       });      
       return ctx.send({user});
     },
