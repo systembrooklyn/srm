@@ -1,0 +1,307 @@
+{
+  "kind": "collectionType",
+  "collectionName": "m_app_courses",
+  "info": {
+    "singularName": "m-app-course",
+    "pluralName": "m-app-courses",
+    "displayName": "mAppCourse"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+ "pluginOptions": {},
+  "attributes": {
+    "student_num": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "g1": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "g1_date": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "g2": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "g2_date": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "g3": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "g3_date": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "g4": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "g4_date": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "g5": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "g5_date": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "g6": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "g6_date": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "g7": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "g7_date": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "g8": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "g8_date": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "g9": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "g9_date": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "g10": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "g10_date": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "g11": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "g11_date": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "g12": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "g12_date": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "g1_att": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "g2_att": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "g3_att": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "g4_att": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "g5_att": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "g6_att": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "g7_att": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "g8_att": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "g9_att": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "g10_att": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "g11_att": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "g12_att": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "g1_total_lec": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "g2_total_lec": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "g3_total_lec": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "g4_total_lec": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "g5_total_lec": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "g6_total_lec": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "g7_total_lec": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "g8_total_lec": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "g9_total_lec": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "g10_total_lec": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "g11_total_lec": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "g12_total_lec": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "g1_grade": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "g2_grade": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "g3_grade": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "g4_grade": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "g5_grade": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "g6_grade": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "g7_grade": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "g8_grade": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "g9_grade": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "g10_grade": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "g11_grade": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "g12_grade": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "g1_name": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "g2_name": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "g3_name": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "g4_name": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "g5_name": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "g6_name": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "g7_name": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "g8_name": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "g9_name": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "g10_name": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "g11_name": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "g12_name": {
+      "type": "string",
+      "maxLength": 100
+    }
+  }
+}

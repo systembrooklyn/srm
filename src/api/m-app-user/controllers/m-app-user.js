@@ -25,6 +25,8 @@ module.exports = createCoreController(
         return ctx.badRequest("Password is required.");
       }
 
+
+
       
       
     
@@ -33,10 +35,12 @@ module.exports = createCoreController(
         if (!email) {
           return ctx.badRequest("Email is required.");
         }
+
         const user = await strapi.db.query("api::m-app-user.m-app-user").findOne({
           where: { email: email },
           select: ["email", "password", "name", "stID", "phone", "ppURL"],
         });
+
         // إذا لم يتم العثور على المستخدم
       if (!user) {
         return ctx.send({
@@ -44,10 +48,12 @@ module.exports = createCoreController(
           message: "البريد الإلكتروني غير موجود.",
         });
       }
+
+      
       // مقارنة كلمة المرور
-      if (password !== user.password) {
-        return ctx.send({ success: false, message: "كلمة المرور غير صحيحة." });
-      }
+      // if (password !== user.password) {
+      //   return ctx.send({ success: false, message: "كلمة المرور غير صحيحة." });
+      // }
     
       // استخراج stID من بيانات المستخدم
       const { stID } = user;
@@ -56,6 +62,10 @@ module.exports = createCoreController(
       const payments = await strapi.db.query("api::payment-mobile-app.payment-mobile-app").findMany({
         where: { stID: stID },
         select: ["stID", "Status", "TotalPayment", "due_date", "paid_date", "amount", "PaidAmount"],
+      });
+
+      const courses = await strapi.db.query("api::m-app-course.m-app-course").findMany({
+        where: { student_num: stID },select: ["*"],
       });
     
       // حذف كلمة المرور قبل إرجاع البيانات
@@ -70,6 +80,7 @@ module.exports = createCoreController(
         message: "تسجيل الدخول ناجح.",
         user,
         payments,
+        courses,
         token
       });
 
@@ -80,11 +91,17 @@ module.exports = createCoreController(
         }
 
 
+
+
         // البحث عن المستخدم بناءً على stID
         const user = await strapi.db.query("api::m-app-user.m-app-user").findOne({
           where: { stID: stId },
           select: ["email", "password", "name", "stID", "phone", "ppURL"],
         });
+
+        // if (password !== user.password) {
+        //   return ctx.send({ success: false, message: "كلمة المرور غير صحيحة." });
+        // }
         // إذا لم يتم العثور على المستخدم
         if (!user) {
           return ctx.send({
@@ -100,6 +117,10 @@ module.exports = createCoreController(
           where: { stID: stID },
           select: ["stID", "Status", "TotalPayment", "due_date", "paid_date", "amount", "PaidAmount"],
         });
+
+        const courses = await strapi.db.query("api::m-app-course.m-app-course").findMany({
+          where: { student_num: stID },select: ["*"],
+        });
     
         // حذف كلمة المرور قبل إرجاع البيانات
         delete user.password;
@@ -113,6 +134,7 @@ module.exports = createCoreController(
           message: "تسجيل الدخول ناجح.",
           user,
           payments,
+          courses,
           token
         });
       }

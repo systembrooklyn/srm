@@ -1,6 +1,6 @@
 {
   "kind": "collectionType",
-  "collectionName": "payment_mobile_apps",
+  "collectionName": "m-app-payments",
   "info": {
     "singularName": "payment-mobile-app",
     "pluralName": "payment-mobile-apps",
