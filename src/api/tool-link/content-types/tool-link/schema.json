@@ -35,6 +35,9 @@
     },
     "auto_reservation": {
       "type": "string"
+    },
+    "PayDeleteReceipts": {
+      "type": "text"
     }
   }
 }
